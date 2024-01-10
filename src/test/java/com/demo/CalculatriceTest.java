@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatriceTest {
@@ -79,4 +81,17 @@ public class CalculatriceTest {
         assertSame(c1, c3);
         assertNotSame(c1, c2);
     }
+
+    @Test
+    void testDivision(){
+        assertEquals(2, Calculatrice.diviser(10, 5));
+    }
+
+    @Test
+    void testDivisionParZero(){
+       assertThrows( ArithmeticException.class, () -> {
+           Calculatrice.diviser(10, 0);
+       });
+    }
+
 }

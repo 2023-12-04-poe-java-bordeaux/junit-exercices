@@ -25,4 +25,7 @@ public class Calculatrice {
         return impairs;
     }
 
+    public static int diviser(int a, int b){
+        return a / b;
+    }
 }
