@@ -1,6 +1,9 @@
 package com.demo;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatriceTest {
@@ -61,5 +64,9 @@ public class CalculatriceTest {
         assertFalse(Calculatrice.getNombresImpairs(10).contains(10));
     }
 
-
+    @ParameterizedTest
+    @CsvSource({ "2,8,8" , "2,0,2", "2,-8,2"  })
+    void testMaxAvecParametres(int a,int b,int resultat){
+        assertEquals(resultat, Calculatrice.max(a,b));
+    }
 }
