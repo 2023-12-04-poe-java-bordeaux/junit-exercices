@@ -69,4 +69,14 @@ public class CalculatriceTest {
     void testMaxAvecParametres(int a,int b,int resultat){
         assertEquals(resultat, Calculatrice.max(a,b));
     }
+
+    @Test
+    void testAssertSame(){
+        Calculatrice c1 = new Calculatrice();
+        Calculatrice c2 = new Calculatrice();
+        Calculatrice c3 = c1;
+
+        assertSame(c1, c3);
+        assertNotSame(c1, c2);
+    }
 }
