@@ -20,4 +20,10 @@ public class CalculatriceTest {
     void testAdditionnerAvecNombreNegatif(){
         assertEquals(-6, Calculatrice.additionner(-2, -4));
     }
+
+    @Test
+    void testSoustraire()
+    {
+        assertEquals(2, Calculatrice.soustraire(6, 4));
+    }
 }
