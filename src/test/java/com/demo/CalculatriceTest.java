@@ -12,7 +12,7 @@ public class CalculatriceTest {
     }
 
     @Test
-    void testAddtionnerDeuxAvecZero(){
+    void testAdditionnerDeuxAvecZero(){
         assertEquals(2, Calculatrice.additionner(2,0));
     }
 
