@@ -26,4 +26,22 @@ public class CalculatriceTest {
     {
         assertEquals(2, Calculatrice.soustraire(6, 4));
     }
+
+    @Test
+    void testMax(){
+        assertEquals(8, Calculatrice.max(2,8));
+    }
+    @Test
+    void testMaxAvecZero(){
+        assertEquals(2, Calculatrice.max(2,0));
+    }
+    @Test
+    void testMaxAvecNombreNegatif(){
+        assertEquals(2, Calculatrice.max(2,-8));
+    }
+    @Test
+    void testMaxAvecNombreIdentiques(){
+        assertEquals(3, Calculatrice.max(3,3));
+    }
+
 }
