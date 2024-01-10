@@ -44,4 +44,22 @@ public class CalculatriceTest {
         assertEquals(3, Calculatrice.max(3,3));
     }
 
+    @Test
+    void testImpairsAvecCinq(){
+        assertTrue(Calculatrice.getNombresImpairs(10).contains(5));
+    }
+    @Test
+    void testImpairsAvecQuatre(){
+        assertFalse(Calculatrice.getNombresImpairs(10).contains(4));
+    }
+    @Test
+    void testImpairsAvecZero(){
+        assertFalse(Calculatrice.getNombresImpairs(10).contains(0));
+    }
+    @Test
+    void testImpairsAvecMax(){
+        assertFalse(Calculatrice.getNombresImpairs(10).contains(10));
+    }
+
+
 }
